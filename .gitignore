@@ -1,6 +1,14 @@
 .idea
 *.iml
+*.ipr
+*.iws
 *.json
 *.log
 target/
+out/
+
+.DS_Store
+
+.gitignore
+
 */MysqlDB.java
