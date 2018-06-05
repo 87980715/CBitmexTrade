@@ -29,9 +29,9 @@ import java.sql.SQLException;
 @Log4j
 public class MysqlDB {
 
-    private static final String MYSQL_URL = "jdbc:mysql://127.0.0.1:3306/hedata?serverTimezone=UTC&characterEncoding=utf8&useSSL=false&autoReconnect=true&failOverReadOnly=false";
-    private static final String MYSQL_NAME = "user";
-    private static final String MYSQL_PASSWORD = "password";
+    private static final String MYSQL_URL = "jdbc:mysql://198.13.56.123:33061/hedata?serverTimezone=UTC&characterEncoding=utf8&useSSL=false&autoReconnect=true&failOverReadOnly=false";
+    private static final String MYSQL_NAME = "btcdog";
+    private static final String MYSQL_PASSWORD = "hYNns6#M23aJ(Nn8";
     private static Connection conn = null;
 
     static {
@@ -78,12 +78,10 @@ public class MysqlDB {
             pstmt.setString(9, data.getTimestamp());
             pstmt.setLong(10, data.getTimestampl());
             pstmt.execute();
-            conn.commit();
+            //conn.commit();
         }catch (Exception e){
             log.error(e.getMessage());
             //e.printStackTrace();
         }
-
     }
-
 }
